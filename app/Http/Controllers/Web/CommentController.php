@@ -21,7 +21,7 @@ class CommentController extends Controller
             'body' => $request->body,
         ]);
 
-        return redirect()->route('web.posts.show', $post);
+        return redirect()->route('posts.show', $post);
     }
 
     public function update(Request $request, Comment $comment)
