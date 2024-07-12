@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
+<!-- resources/views/auth/login.blade.php -->
+@extends('layouts.app')
+
+@section('content')
     <h1>Login</h1>
-    <form action="{{ route('login') }}" method="POST">
+    <form method="POST" action="{{ route('login') }}">
         @csrf
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
-        </div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" required>
         <button type="submit">Login</button>
     </form>
-</body>
-</html>
+@endsection
