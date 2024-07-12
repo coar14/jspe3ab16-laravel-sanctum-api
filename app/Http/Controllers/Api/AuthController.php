@@ -46,7 +46,7 @@ class AuthController extends Controller
             ];
         }
 
-        return redirect()->route('home'); // Change this to your home route
+        return redirect()->route('home');
     }
 
     public function showLoginForm()
@@ -77,7 +77,7 @@ class AuthController extends Controller
                 ];
             }
 
-            return redirect()->intended('home'); // Change this to your home route
+            return redirect()->intended('home');
         }
 
         return back()->withErrors([
