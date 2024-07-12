@@ -18,7 +18,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-    
+
 
     protected $hidden = [
         'password',
@@ -37,7 +37,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
-    public function comments()
+    public function comments(): HasMany
     {
         return $this->hasMany(Comment::class);
     }
